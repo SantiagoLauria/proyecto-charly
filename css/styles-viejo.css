@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  list-style-type: none
+}
+
+html {
+  background-color: lightsteelblue;
+}
+
+footer {
+  background-color: steelblue;
+}
+
+.logo {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.lista-footer {
+  border: 1rem;
+  border-color: black;
+  padding: 1rem;
+  color: white;
+}
+
+.lista-footer ul li {
+  display: inline-block;
+}
+
+.lista-footer ul li a {
+  color: white;
+}
+
+/* -- Estilo de la discografía -- */
+.discografia li img {
+  max-width: 200px;
+  ;
+}
+
+.discografia li h4 {
+  display: inline-block;
+
+}
+
+
+/* -- Hago una distinción con el estilo de la discografía de la página Otros Proyectos para poder agregar una descripción a cada álbum --  */
+
+
+/* Estilo de los títulos */
+
+.titulo-principal h1 {
+  display: inline-block;
+}
+
+h3 {
+  padding: 1rem;
+}
+
+footer h3 {
+  color: white;
+  /* padding: 1rem; */
+  /* padding-top: 10px; */
+}
+
+/* Flexbox del encabezado -- */
+.flexbox-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flexbox para la lista de navegación: */
+.flexbox-nav {
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: steelblue
+}
+
+.flexbox-nav li a {
+  color: white;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+/* Flexbox títulos */
+.flex-titulo {
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-texto h3 {
+  text-align: center;
+}
+
+.flex-sobre {
+  /* height: 50rem; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+}
+
+.flex-sobre .sobre-texto {
+  text-align: justify;
+  padding: 1rem;
+  max-width: 50vw;
+  align-self: center;
+}
+
+.sobre-texto h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.flex-sobre .img-main {
+  align-content: center;
+  max-width: 48vw;
+  max-height: 80vh;
+}
+
+img {
+  width: 100%;
+  /* max-width: 48vh; */
+}
+
+.flex-footer {
+  display: flex;
+  height: fit-content;
+  padding: 1rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* align-content: flex-start; */
+}
+
+.links-footer ul li {
+  display: inline-block;
+}
+
+.links-footer ul li div {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0rem 1rem;
+  align-items: center;
+  /* height: fit-content; */
+  /* text-align: center; */
+
+}
+
+.links-footer ul li a {
+  height: fit-content;
+  color: white;
+  padding: 0 0.5rem;
+}
+
+a img {
+  width: 50px;
+  border-radius: 50%;
+  /* height: 100px; */
+}
+
+/* Grid para la discografía */
+
+.grid-disco {
+  background-color: rgba(70, 131, 180, 0.316);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 20px; */
+}
+
+.grid-disco li {
+  padding: 1rem;
+}
+
+.grid-disco li img {
+  max-width: 200px;
+  min-width: 50px
+}
+
+.grid-disco-hijo {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-disco-hijo div h4 {
+  text-align: center;
+}
+
+.grid-disco-hijo div p {
+  padding: 1rem;
+}
