@@ -7,7 +7,9 @@
   text-decoration: none;
 }
 
-html {
+html,
+body,
+header {
   background-color: lightsteelblue;
 }
 
@@ -38,11 +40,12 @@ p a {
 /* ---- Estilo del Header ---- */
 .header {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
   /* gap: 1rem; */
   align-items: center;
   justify-items: center;
   padding: 1rem;
+  border-bottom: 1px solid black;
 }
 
 .header .header-titulo {
@@ -50,30 +53,52 @@ p a {
   height: fit-content;
 }
 
+.header i {
+  color: black
+}
+
 .logo {
+  order: 1;
+}
+
+.logo img {
   border-radius: 50%;
   width: 60px;
 }
 
 
 /* ---- Estilo de la barra de Nav ---- */
-nav {
+
+
+.btn {
+  background-color: lightsteelblue;
+}
+
+.btn:hover {
+  background-color: lightsteelblue;
+  border: none;
+
+}
+
+.lista-nav-bs {
   background-color: steelblue;
 }
 
-.lista-nav {
-  display: grid;
-  gap: 0.5rem;
-  padding: 0.5rem;
-}
-
-.lista-nav li {
+.lista-nav-bs li {
   text-align: center;
-  border: 1px solid lightsteelblue;
+  border-bottom: 1px solid lightsteelblue;
 }
 
-.lista-nav a {
+.li1 {
+  border-top: 1px solid lightsteelblue;
+}
+
+.lista-nav-bs a {
   color: white;
+}
+
+.lista-nav {
+  display: none;
 }
 
 /* ---- Estilo del Main ---- */
@@ -143,6 +168,10 @@ i {
   text-align: center;
 }
 
+.lista-discografia {
+  padding-left: 0;
+}
+
 .lista-discografia li {
   display: grid;
   padding: 1rem;
@@ -195,16 +224,34 @@ i {
   }
 
   .logo {
+    order: 0;
+  }
+
+  .logo img {
     width: 80px;
   }
 
+  .nav {
+    order: 1;
+    grid-column: span 3;
+    background-color: steelblue;
+  }
+
+  .div-nav {
+    border-bottom: 1px solid black;
+    background-color: steelblue;
+  }
+
   .lista-nav {
+    display: grid;
     grid-template-columns: repeat(6, max-content);
     justify-content: space-evenly;
     gap: 0.5rem;
     padding: 0.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    background-color: steelblue;
   }
 
   .lista-nav li {
@@ -213,6 +260,7 @@ i {
 
   .lista-nav a {
     text-decoration: underline;
+    color: white;
   }
 
   .info {
@@ -250,7 +298,8 @@ i {
   }
 
   .lista-discografia li {
-
+    text-align: center;
+    border-bottom: 1px solid lightsteelblue;
     border: none;
   }
 
@@ -260,6 +309,10 @@ i {
 
   i {
     font-size: 3rem;
+  }
+
+  .btn {
+    display: none;
   }
 }
 
