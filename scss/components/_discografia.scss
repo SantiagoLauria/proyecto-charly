@@ -1,0 +1,53 @@
+.discografia {
+  &__titulo {
+    text-align: center;
+  }
+
+  &__lista {
+    padding-left: 0;
+
+    li {
+      display: grid;
+      padding: 1rem;
+      gap: 1rem;
+      border-bottom: 1px solid black;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    img {
+      width: 60vw;
+      max-width: 200px;
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .discografia__lista li {
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media(min-width: 1024px) and (orientation: landscape) {
+  .discografia__lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem;
+
+    li {
+      text-align: center;
+      border-bottom: 1px solid lightsteelblue;
+      border: none;
+    }
+  }
+}
+
+@media(min-width: 1200px) and (orientation: landscape) {
+  .discografia__lista {
+    grid-template-columns: 1fr 1fr
+  }
+}
