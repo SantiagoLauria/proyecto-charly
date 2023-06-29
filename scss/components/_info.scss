@@ -1,13 +1,10 @@
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  @include caja-flex(column, space-around, center);
   padding: 1rem;
   gap: 0.5rem;
 
   &__titulo {
-    text-align: center;
+    @include texto-centro;
   }
 
   &__texto {
@@ -16,7 +13,7 @@
     text-align: justify;
 
     h3 {
-      text-align: center;
+      @include texto-centro;
     }
   }
 

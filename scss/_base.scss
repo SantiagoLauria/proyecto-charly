@@ -45,3 +45,14 @@ p a {
     font-size: 3rem;
   }
 }
+
+@mixin caja-flex ($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin texto-centro {
+  text-align: center;
+}
