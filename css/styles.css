@@ -84,7 +84,8 @@ p a {
 .header .lista-nav-bs a {
   color: white;
 }
-.header .lista-nav {
+
+.lista-nav {
   display: none;
 }
 
@@ -245,6 +246,31 @@ footer {
 .info img {
   min-height: 200px;
   object-fit: cover;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  .info__texto {
+    padding: 1rem;
+  }
+  .info__titulo {
+    grid-column: span 2;
+  }
+  .info img {
+    max-height: 80vh;
+  }
+  .info .img-span2 {
+    grid-column: span 2;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

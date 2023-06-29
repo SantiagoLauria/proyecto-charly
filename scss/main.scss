@@ -6,30 +6,4 @@
 
 @import "components/discografia";
 
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 1rem;
-  gap: 0.5rem;
-
-  &__titulo {
-    text-align: center;
-  }
-
-  &__texto {
-    width: fit-content;
-    margin: 0 auto;
-    text-align: justify;
-
-    h3 {
-      text-align: center;
-    }
-  }
-
-  img {
-    min-height: 200px;
-    object-fit: cover;
-  }
-}
+@import "components/info"

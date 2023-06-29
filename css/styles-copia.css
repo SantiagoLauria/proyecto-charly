@@ -190,31 +190,11 @@ i {
 
 
 /* ---- Acá arranca el Media Query para tablets ---- */
-@media(min-width:420px) {
-  .footer {
-    justify-content: space-between;
-  }
 
-  .footer ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 
-  li a {
-    text-align: center;
-  }
 
-  .lista-discografia li {
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
-  }
 
-}
+
 
 
 /* ---- Media Query para Desktop ---- */
@@ -261,17 +241,9 @@ i {
     border: none;
   }
 
-  .footer ul {
-    grid-template-columns: repeat(3, 200px)
-  }
 
 
 
 
-}
 
-@media(min-width: 1200px) and (orientation: landscape) {
-  .lista-discografia {
-    grid-template-columns: 1fr 1fr
-  }
 }
