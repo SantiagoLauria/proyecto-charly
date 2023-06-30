@@ -1,6 +1,7 @@
 .tienda {
   @include caja-flex(column, space-evenly, center);
   padding: 1rem;
+  gap: 1rem;
 
   // &__titulo {}
 }

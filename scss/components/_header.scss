@@ -6,7 +6,8 @@
   padding: 1rem;
   border-bottom: 1px solid black;
 
-  &-titulo {
+  &__titulo {
+    @include texto-centro;
     width: fit-content;
     height: fit-content;
   }

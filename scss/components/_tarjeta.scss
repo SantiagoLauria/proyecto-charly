@@ -1,7 +1,7 @@
 .tarjeta {
   box-shadow: 1px 1px 10px;
   width: 80%;
-  height: 400px;
+  // height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -9,10 +9,16 @@
 
 
   &__img {
-    // height: 50%;
-    width: 100%;
-    object-fit: contain;
+    display: flex;
     grid-column: span 2;
+    width: 100%;
+    height: 400px;
+
+    img {
+      width: 100%;
+      // height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__nombre {
