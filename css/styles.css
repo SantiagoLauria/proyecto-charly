@@ -276,10 +276,13 @@ footer {
 .tarjeta {
   box-shadow: 1px 1px 10px;
   width: 80%;
+  max-width: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  background-color: steelblue;
+  transition: all 0.5s;
 }
 .tarjeta__img {
   display: flex;
@@ -310,6 +313,10 @@ footer {
 }
 .tarjeta button i {
   font-size: 1rem;
+}
+.tarjeta:hover {
+  box-shadow: 3px 3px 20px;
+  background-color: #d7b777;
 }
 
 .tienda {

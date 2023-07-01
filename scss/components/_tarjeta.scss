@@ -1,11 +1,14 @@
 .tarjeta {
   box-shadow: 1px 1px 10px;
   width: 80%;
+  max-width: 400px;
   // height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  background-color: $color-secundario;
+  transition: all 0.5s;
 
 
   &__img {
@@ -53,5 +56,11 @@
     i {
       font-size: 1rem;
     }
+  }
+
+  &:hover {
+
+    box-shadow: 3px 3px 20px;
+    background-color: $color-terciario;
   }
 }
