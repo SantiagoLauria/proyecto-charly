@@ -1,7 +1,13 @@
 .tienda {
-  @include caja-flex(column, space-evenly, center);
-  padding: 1rem;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  // padding: 1rem;
+  // gap: 1rem;
+  margin: 0;
 
-  // &__titulo {}
+  &__titulo {
+    @include texto-centro;
+    grid-column: span 2;
+  }
 }
