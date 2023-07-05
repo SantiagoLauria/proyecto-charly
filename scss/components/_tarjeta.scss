@@ -1,8 +1,9 @@
 .tarjeta {
   box-shadow: 1px 1px 10px;
+  min-width: 190px;
   width: 80%;
-  max-width: 400px;
-  // height: 500px;
+  max-width: 280px;
+  // max-height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -16,7 +17,7 @@
     grid-column: span 2;
     width: 100%;
     height: 50vh;
-    max-height: 400px;
+    max-height: 300px;
 
     img {
       width: 100%;
@@ -28,8 +29,11 @@
   &__nombre {
     @include texto-centro;
     grid-column: span 2;
+    display: flex;
+    align-items: center;
     padding: 0.3rem;
     margin-bottom: 0;
+    height: 5rem;
   }
 
   &__precio {
@@ -38,7 +42,8 @@
     font-size: 1.2rem;
     grid-column: span 2;
     margin-bottom: 0;
-    strong{
+
+    strong {
       font-family: $sans-serif;
     }
   }
