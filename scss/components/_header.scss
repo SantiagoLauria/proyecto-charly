@@ -1,3 +1,7 @@
+.lista-nav {
+  display: none;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -51,29 +55,77 @@
     }
   }
 
+  .charly-cayendo {
+    width: 50px;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    animation-name: caida;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.91, .03, .55, 1.2);
+  }
 }
 
-.lista-nav {
-  display: none;
+@media(max-width:1024px) {
+  .charly-cayendo {
+
+    &__texto1,
+    &__texto2,
+    &__texto3 {
+      display: none;
+    }
+  }
 }
-
-
-
 
 @media(min-width: 1024px) and (orientation: landscape) {
   .header {
     grid-template-columns: 1fr 4fr 1fr;
-    
+
     .logo {
       order: 0;
-      
+
       img {
         width: 80px;
       }
     }
-    
+
     .btn {
       display: none;
+    }
+
+    .charly-cayendo {
+      &__texto1 {
+        position: fixed;
+        right: 4rem;
+        top: 3rem;
+        color: transparent;
+        animation-name: caida-texto1;
+        animation-duration: 15s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+
+      &__texto2 {
+        color: transparent;
+        position: fixed;
+        right: 4rem;
+        top: 5rem;
+        animation-name: caida-texto2;
+        animation-duration: 15s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+
+      &__texto3 {
+        color: transparent;
+        position: absolute;
+        right: 4rem;
+        top: 5rem;
+        animation: caida-texto3 20s 1 linear;
+      }
     }
   }
 
@@ -103,8 +155,15 @@
       border: none;
 
       a {
-        text-decoration: underline;
         color: white;
+        text-decoration: none;
+        transition-property: text-shadow, background-color;
+        transition-duration: 0.1s;
+
+        &:hover {
+          text-shadow: 5px 5px 5px black;
+
+        }
       }
     }
   }

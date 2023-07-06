@@ -52,6 +52,19 @@ footer {
 
 @media(min-width: 1024px) and (orientation: landscape) {
   .footer ul {
-    grid-template-columns: repeat(3, 200px)
+    grid-template-columns: repeat(3, 200px);
+
+    li a {
+      color: white;
+      text-decoration: none;
+      transition-property: text-shadow, background-color;
+      transition-duration: 0.1s;
+
+      &:hover {
+        text-shadow: 5px 5px 5px black;
+
+      }
+    }
+
   }
 }

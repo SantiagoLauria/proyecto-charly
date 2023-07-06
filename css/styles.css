@@ -7,10 +7,13 @@
   text-decoration: none;
 }
 
-html,
+html {
+  background-color: lightsteelblue;
+}
+
 body,
 header {
-  background-color: lightsteelblue;
+  background-color: transparent;
 }
 
 img {
@@ -44,6 +47,69 @@ p a {
 }
 .texto-chico {
   font-size: 1.2rem;
+}
+
+@keyframes caida {
+  80% {
+    top: 1rem;
+  }
+  100% {
+    top: 120%;
+  }
+}
+@keyframes caida-texto1 {
+  35% {
+    color: transparent;
+  }
+  36% {
+    color: black;
+  }
+  49% {
+    color: black;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
+}
+@keyframes caida-texto2 {
+  81% {
+    color: transparent;
+  }
+  82% {
+    color: black;
+  }
+  90% {
+    color: black;
+  }
+  91% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
+}
+@keyframes caida-texto3 {
+  81% {
+    color: transparent;
+  }
+  82% {
+    color: black;
+  }
+  90% {
+    color: black;
+  }
+  91% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
+}
+.lista-nav {
+  display: none;
 }
 
 .header {
@@ -89,11 +155,24 @@ p a {
 .header .lista-nav-bs a {
   color: white;
 }
-
-.lista-nav {
-  display: none;
+.header .charly-cayendo {
+  width: 50px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  animation-name: caida;
+  animation-duration: 15s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.91, 0.03, 0.55, 1.2);
 }
 
+@media (max-width: 1024px) {
+  .charly-cayendo__texto1, .charly-cayendo__texto2, .charly-cayendo__texto3 {
+    display: none;
+  }
+}
 @media (min-width: 1024px) and (orientation: landscape) {
   .header {
     grid-template-columns: 1fr 4fr 1fr;
@@ -106,6 +185,33 @@ p a {
   }
   .header .btn {
     display: none;
+  }
+  .header .charly-cayendo__texto1 {
+    position: fixed;
+    right: 4rem;
+    top: 3rem;
+    color: transparent;
+    animation-name: caida-texto1;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  .header .charly-cayendo__texto2 {
+    color: transparent;
+    position: fixed;
+    right: 4rem;
+    top: 5rem;
+    animation-name: caida-texto2;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  .header .charly-cayendo__texto3 {
+    color: transparent;
+    position: absolute;
+    right: 4rem;
+    top: 5rem;
+    animation: caida-texto3 20s 1 linear;
   }
   .nav {
     order: 1;
@@ -131,8 +237,13 @@ p a {
     border: none;
   }
   .lista-nav li a {
-    text-decoration: underline;
     color: white;
+    text-decoration: none;
+    transition-property: text-shadow, background-color;
+    transition-duration: 0.1s;
+  }
+  .lista-nav li a:hover {
+    text-shadow: 5px 5px 5px black;
   }
 }
 footer {
@@ -183,6 +294,15 @@ footer {
 @media (min-width: 1024px) and (orientation: landscape) {
   .footer ul {
     grid-template-columns: repeat(3, 200px);
+  }
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition-property: text-shadow, background-color;
+    transition-duration: 0.1s;
+  }
+  .footer ul li a:hover {
+    text-shadow: 5px 5px 5px black;
   }
 }
 .discografia__titulo {

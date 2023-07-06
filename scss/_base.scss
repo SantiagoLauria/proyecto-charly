@@ -13,10 +13,13 @@ $serif: 'PT Serif', serif;
   text-decoration: none;
 }
 
-html,
+html {
+  background-color: $color-principal;
+}
+
 body,
 header {
-  background-color: $color-principal;
+  background-color: transparent;
 }
 
 img {
@@ -62,4 +65,84 @@ p a {
 
 .texto-chico {
   font-size: 1.2rem;
+}
+
+@keyframes caida {
+  80% {
+    top: 1rem
+  }
+
+  100% {
+    top: 120%;
+  }
+}
+
+@keyframes caida-texto1 {
+  35% {
+    color: transparent;
+  }
+
+  36% {
+    color: black;
+  }
+
+  49% {
+    color: black;
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes caida-texto2 {
+  81% {
+    color: transparent;
+  }
+
+  82% {
+    color: black;
+
+  }
+
+  90% {
+    color: black;
+
+  }
+
+  91% {
+    color: transparent;
+  }
+
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes caida-texto3 {
+  81% {
+    color: transparent;
+  }
+
+  82% {
+    color: black;
+
+  }
+
+  90% {
+    color: black;
+
+  }
+
+  91% {
+    color: transparent;
+  }
+
+  100% {
+    color: transparent;
+  }
 }
