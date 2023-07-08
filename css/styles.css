@@ -137,10 +137,15 @@ p a {
 }
 .header .btn {
   background-color: lightsteelblue;
+  border: none;
 }
 .header .btn:hover {
   background-color: lightsteelblue;
   border: none;
+}
+.header .dropdown-item:hover {
+  background-color: steelblue;
+  text-shadow: black 5px 5px 5px;
 }
 .header .lista-nav-bs {
   background-color: steelblue;

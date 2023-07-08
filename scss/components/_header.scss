@@ -31,10 +31,18 @@
 
   .btn {
     background-color: $color-principal;
+    border: none;
 
     &:hover {
       background-color: $color-principal;
       border: none;
+    }
+  }
+
+  .dropdown-item {
+    &:hover {
+      background-color: $color-secundario;
+      text-shadow: black 5px 5px 5px;
     }
   }
 
