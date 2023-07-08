@@ -329,6 +329,9 @@ footer {
   width: 60vw;
   max-width: 200px;
 }
+.discografia__lista img:hover {
+  transform: scale(1.2);
+}
 
 @media (min-width: 768px) {
   .discografia__lista li {

@@ -20,6 +20,11 @@
     img {
       width: 60vw;
       max-width: 200px;
+      // box-shadow: 2px 2px 8px black;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
