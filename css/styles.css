@@ -328,9 +328,11 @@ footer {
 .discografia__lista img {
   width: 60vw;
   max-width: 200px;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 .discografia__lista img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
