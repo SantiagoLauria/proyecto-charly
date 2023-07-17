@@ -268,14 +268,17 @@ p a {
   width: 20vw;
   max-width: 60px;
 }
-.footer ul li, .footer-index__div ul li {
+.footer ul, .footer-index__div ul {
+  padding: 0;
+}
+.footer li, .footer-index__div li {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-items: center;
   align-items: center;
   gap: 0.5rem;
 }
-.footer ul li a, .footer-index__div ul li a {
+.footer li a, .footer-index__div li a {
   color: white;
   text-decoration: underline;
 }
