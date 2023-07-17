@@ -40,6 +40,11 @@ p a {
   font-family: "PT Serif", serif;
 }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
 @media (min-width: 1024px) and (orientation: landscape) {
   i {
     font-size: 3rem;
@@ -251,11 +256,8 @@ p a {
     text-shadow: 5px 5px 5px black;
   }
 }
-footer {
+.footer, .footer-index {
   background-color: steelblue;
-}
-
-.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,27 +265,27 @@ footer {
   gap: 0.5rem;
   color: white;
 }
-.footer img {
+.footer img, .footer-index img {
   width: 20vw;
   max-width: 60px;
 }
-.footer ul li {
+.footer ul li, .footer-index ul li {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-items: center;
   align-items: center;
   gap: 0.5rem;
 }
-.footer ul li a {
+.footer ul li a, .footer-index ul li a {
   color: white;
   text-decoration: underline;
 }
 
 @media (min-width: 420px) {
-  .footer {
+  .footer, .footer-index {
     justify-content: space-between;
   }
-  .footer ul {
+  .footer ul, .footer-index ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -292,24 +294,32 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .footer ul li a {
+  .footer ul li a, .footer-index ul li a {
     text-align: center;
   }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
-  .footer ul {
+  .footer ul, .footer-index ul {
     grid-template-columns: repeat(3, 200px);
   }
-  .footer ul li a {
+  .footer ul li a, .footer-index ul li a {
     color: white;
     text-decoration: none;
     transition-property: text-shadow, background-color;
     transition-duration: 0.1s;
   }
-  .footer ul li a:hover {
+  .footer ul li a:hover, .footer-index ul li a:hover {
     text-shadow: 5px 5px 5px black;
   }
 }
+@media (min-width: 1200px) {
+  .footer-index {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+
 .discografia__titulo {
   text-align: center;
 }
