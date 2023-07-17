@@ -11,6 +11,10 @@ html {
   background-color: lightsteelblue;
 }
 
+body {
+  min-height: 100vh;
+}
+
 body,
 header {
   background-color: transparent;
@@ -38,11 +42,6 @@ p,
 strong,
 p a {
   font-family: "PT Serif", serif;
-}
-
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
@@ -256,7 +255,7 @@ p a {
     text-shadow: 5px 5px 5px black;
   }
 }
-.footer, .footer-index {
+.footer, .footer-index__div {
   background-color: steelblue;
   display: flex;
   flex-direction: column;
@@ -265,27 +264,27 @@ p a {
   gap: 0.5rem;
   color: white;
 }
-.footer img, .footer-index img {
+.footer img, .footer-index__div img {
   width: 20vw;
   max-width: 60px;
 }
-.footer ul li, .footer-index ul li {
+.footer ul li, .footer-index__div ul li {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-items: center;
   align-items: center;
   gap: 0.5rem;
 }
-.footer ul li a, .footer-index ul li a {
+.footer ul li a, .footer-index__div ul li a {
   color: white;
   text-decoration: underline;
 }
 
 @media (min-width: 420px) {
-  .footer, .footer-index {
+  .footer, .footer-index__div {
     justify-content: space-between;
   }
-  .footer ul, .footer-index ul {
+  .footer ul, .footer-index__div ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -294,32 +293,29 @@ p a {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .footer ul li a, .footer-index ul li a {
+  .footer ul li a, .footer-index__div ul li a {
     text-align: center;
   }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
-  .footer ul, .footer-index ul {
+  .footer ul, .footer-index__div ul {
     grid-template-columns: repeat(3, 200px);
   }
-  .footer ul li a, .footer-index ul li a {
+  .footer ul li a, .footer-index__div ul li a {
     color: white;
     text-decoration: none;
     transition-property: text-shadow, background-color;
     transition-duration: 0.1s;
   }
-  .footer ul li a:hover, .footer-index ul li a:hover {
+  .footer ul li a:hover, .footer-index__div ul li a:hover {
     text-shadow: 5px 5px 5px black;
   }
 }
 @media (min-width: 1200px) {
   .footer-index {
-    position: fixed;
-    bottom: 0;
-    margin: 0 auto;
+    margin-top: auto;
   }
 }
-
 .discografia__titulo {
   text-align: center;
 }
@@ -471,6 +467,14 @@ p a {
   background-color: #d7b777;
 }
 
+@media (min-width: 1200px) {
+  .body-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+}
 .titulo {
   text-align: center;
   padding: 1rem;

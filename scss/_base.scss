@@ -17,6 +17,10 @@ html {
   background-color: $color-principal;
 }
 
+body {
+  min-height: 100vh;
+}
+
 body,
 header {
   background-color: transparent;
@@ -44,11 +48,6 @@ p,
 strong,
 p a {
   font-family: $serif;
-}
-
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
 }
 
 @media(min-width:1024px) and (orientation: landscape) {

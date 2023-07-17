@@ -68,11 +68,14 @@
 }
 
 .footer-index {
-  @extend .footer;
 
   @media (min-width: 1200px) {
-    position: fixed;
-    bottom: 0;
-    margin: 0 auto;
+
+    margin-top: auto;
+  }
+
+  &__div {
+    @extend .footer;
+
   }
 }
