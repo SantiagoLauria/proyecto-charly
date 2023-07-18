@@ -18,13 +18,9 @@
   }
 
   li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-items: center;
-    align-items: center;
-    gap: 0.5rem;
-
     a {
+      @include caja-flex(row, center, center);
+      gap: 1rem;
       color: white;
       text-decoration: underline;
     }
@@ -58,6 +54,7 @@
     grid-template-columns: repeat(3, 200px);
 
     li a {
+
       color: white;
       text-decoration: none;
       transition-property: text-shadow, background-color;

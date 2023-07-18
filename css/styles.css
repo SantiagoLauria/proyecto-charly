@@ -272,14 +272,12 @@ p a {
 .footer ul, .footer-index__div ul {
   padding: 0;
 }
-.footer li, .footer-index__div li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: 0.5rem;
-}
 .footer li a, .footer-index__div li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   color: white;
   text-decoration: underline;
 }
