@@ -233,7 +233,7 @@ p a {
   }
   .lista-nav {
     display: grid;
-    grid-template-columns: repeat(6, max-content);
+    grid-template-columns: repeat(7, max-content);
     justify-content: space-evenly;
     gap: 0.5rem;
     padding: 0.5rem;
@@ -313,7 +313,7 @@ p a {
     text-shadow: 5px 5px 5px black;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .footer-index {
     margin-top: auto;
   }
@@ -472,7 +472,7 @@ p a {
   background-color: #d7b777;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .body-index {
     display: flex;
     flex-direction: column;
