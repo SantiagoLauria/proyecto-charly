@@ -38,13 +38,21 @@ function agregarACarrito(nombre) {
   carritoArr.push(producto);
 }
 
+function pasarACarritoDOM(nombre) {
+  const contenedor = document.getElementById("offcanvas-carrito");
+  let contenedorNuevo = document.createElement("div");
+  contenedorNuevo.innerHTML = `${carritoArr[nombre].nombre} $${carritoArr[nombre].precio}`;
+  console.log(contenedor, contenedorNuevo);
+  contenedor.appendChild(contenedorNuevo);
+}
+
 function verCarrito() {
   for (let index = 0; index < carritoArr.length; index++) {
     carritoConcat += `${carritoArr[index].nombre} $${carritoArr[index].precio}\n`;
   }
   mostrarCarrito = carritoConcat;
   carritoConcat = "Productos en el carrito:\n\n"; // Para resetear la concatenacion del carrito y que no se repitan productos
-  alert(mostrarCarrito);
+  // alert(mostrarCarrito);
 }
 
 // Ciclo para agregar productos
@@ -76,6 +84,7 @@ let botonAgregar1 = document.querySelector("#agregarProducto1");
 botonAgregar1.addEventListener("click", () => {
   id = 1;
   agregarACarrito(id);
+  pasarACarritoDOM(id - 1);
   verCarrito();
 });
 
